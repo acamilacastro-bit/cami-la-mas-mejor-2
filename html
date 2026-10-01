@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyIA - Asistente Inteligente</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🤖</div>
+            <div>
+                <h1>Study<span>IA</span></h1>
+                <p>Tu asistente inteligente</p>
+            </div>
+        </div>
+
+        <button id="themeButton" class="theme-button" title="Cambiar modo">
+            🌙
+        </button>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-icon">✨</div>
+
+            <h2>Aprendé con ayuda de la IA</h2>
+
+            <p>
+                Elegí una materia, escribí tu pregunta y
+                obtené una explicación de manera rápida y sencilla.
+            </p>
+        </section>
+
+
+        <section class="assistant-card">
+
+            <div class="form-group">
+
+                <label for="subject">
+                    📚 Materia
+                </label>
+
+                <select id="subject">
+                    <option value="">Seleccioná una materia</option>
+                    <option value="Matemática">Matemática</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Inglés">Inglés</option>
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Ciencias">Ciencias</option>
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="question">
+                    💬 Tu pregunta
+                </label>
+
+                <textarea
+                    id="question"
+                    placeholder="Escribí acá tu pregunta..."
+                    maxlength="500"
+                ></textarea>
+
+                <div class="character-counter">
+                    <span id="counter">0</span>/500
+                </div>
+
+            </div>
+
+
+            <div id="errorMessage" class="error-message"></div>
+
+
+            <button id="askButton" class="ask-button">
+                <span>🤖</span>
+                Preguntar a StudyIA
+            </button>
+
+        </section>
+
+
+        <section id="answerSection" class="answer-section hidden">
+
+            <div class="section-title">
+                <h2>💡 Respuesta</h2>
+
+                <button id="summaryButton" class="small-button">
+                    📝 Resumir
+                </button>
+            </div>
+
+            <div class="answer-card">
+
+                <div class="ai-avatar">
+                    🤖
+                </div>
+
+                <div class="answer-content">
+
+                    <div class="answer-info">
+                        <span id="answerSubject">Materia</span>
+                        <span>•</span>
+                        <span>StudyIA</span>
+                    </div>
+
+                    <p id="answerText"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="history-section">
+
+            <div class="history-header">
+
+                <div>
+                    <h2>📜 Historial</h2>
+                    <p>Tus preguntas de esta sesión</p>
+                </div>
+
+                <button id="clearHistory" class="clear-button">
+                    🗑️ Limpiar
+                </button>
+
+            </div>
+
+
+            <div id="history" class="history">
+
+                <div id="emptyHistory" class="empty-history">
+                    <div>💭</div>
+                    <p>Todavía no hiciste ninguna pregunta.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>StudyIA © 2026 • Proyecto escolar de desarrollo web</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
